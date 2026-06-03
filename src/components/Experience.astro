@@ -1,0 +1,53 @@
+---
+import { site } from '../data/site';
+import SectionHeading from './SectionHeading.astro';
+---
+
+<section id="pengalaman" class="section-alt scroll-mt-24 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5 md:px-8">
+    <SectionHeading
+      eyebrow="Pengalaman"
+      title="Perjalanan karier profesional"
+      description="Pengalaman di industri manufaktur, compliance, dan transformasi digital."
+    />
+
+    <ol class="relative space-y-0 border-l border-border pl-8 md:pl-10">
+      {
+        site.experience.map((job, index) => (
+          <li class="relative pb-10 last:pb-0">
+            <span
+              class="absolute -left-[calc(2rem+5px)] top-2 flex h-2.5 w-2.5 rounded-full border-2 border-accent bg-surface-raised md:-left-[calc(2.5rem+5px)]"
+              aria-hidden="true"
+            ></span>
+            {index === 0 && (
+              <span
+                class="absolute -left-[calc(2rem+9px)] top-1.5 flex h-4 w-4 rounded-full bg-accent/25 md:-left-[calc(2.5rem+9px)]"
+                aria-hidden="true"
+              ></span>
+            )}
+            <div class="card-shine p-6 md:p-8">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="font-display text-xl font-semibold text-foreground">{job.role}</h3>
+                <time class="rounded-full bg-surface-overlay px-3 py-1 text-xs font-medium text-accent-dim">
+                  {job.period}
+                </time>
+              </div>
+              {'subtitle' in job && job.subtitle && (
+                <p class="mt-2 text-sm font-medium text-violet">{job.subtitle}</p>
+              )}
+              <p class="mt-1 text-sm text-muted">{job.company}</p>
+              <ul class="mt-5 space-y-3">
+                {job.highlights.map((point) => (
+                  <li class="flex gap-3 text-sm leading-relaxed text-muted">
+                    <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-mint" aria-hidden="true"></span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

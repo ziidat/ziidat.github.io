@@ -1,0 +1,86 @@
+---
+import { site } from '../data/site';
+import SectionHeading from './SectionHeading.astro';
+---
+
+<section id="tentang" class="scroll-mt-24 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5 md:px-8">
+    <SectionHeading
+      eyebrow="Tentang"
+      title="Excellence operasional & solusi digital"
+      description="Ringkasan profesional dan pencapaian utama dalam karier saya."
+    />
+
+    <div class="grid gap-8 lg:grid-cols-[1fr_280px] lg:gap-12">
+      <div>
+        <div class="space-y-5 leading-relaxed text-muted">
+          {site.about.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div class="mt-10 rounded-2xl border border-border-subtle bg-surface-overlay/50 p-6 md:p-8">
+          <h3 class="font-display text-lg font-semibold text-foreground">Pencapaian utama</h3>
+          <ul class="mt-4 space-y-3">
+            {
+              site.achievements.map((item) => (
+                <li class="flex gap-3 text-muted">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet" aria-hidden="true"></span>
+                  <span class="text-sm leading-relaxed md:text-base">{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+
+      <aside class="space-y-5">
+        <div class="card-shine p-6">
+          <h3 class="text-sm font-medium text-accent-dim uppercase tracking-wide">Info singkat</h3>
+          <ul class="mt-5 space-y-4 text-sm">
+            <li class="border-b border-border-subtle pb-4">
+              <span class="text-muted">Lokasi</span>
+              <p class="mt-1 font-medium text-foreground">{site.location}</p>
+            </li>
+            <li class="border-b border-border-subtle pb-4">
+              <span class="text-muted">Telepon</span>
+              <a href={site.phoneHref} class="mt-1 block font-medium text-foreground hover:text-accent-dim">
+                {site.phone}
+              </a>
+            </li>
+            <li class="border-b border-border-subtle pb-4">
+              <span class="text-muted">Pengalaman</span>
+              <p class="mt-1 font-medium text-foreground">{site.yearsExperience} tahun</p>
+            </li>
+            <li>
+              <span class="text-muted">Perusahaan</span>
+              <p class="mt-1 font-medium text-accent-dim">{site.availability}</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-shine bg-surface-overlay/60 p-6">
+          <h3 class="text-sm font-medium text-accent-dim uppercase tracking-wide">Pendidikan</h3>
+          <p class="mt-4 font-medium text-foreground">{site.education.school}</p>
+          <p class="mt-1 text-sm text-muted">{site.education.degree}</p>
+          <p class="mt-2 text-sm">
+            <span class="font-medium text-accent-dim">{site.education.gpa}</span>
+            <span class="text-muted"> · {site.education.period}</span>
+          </p>
+        </div>
+
+        <div class="card-shine bg-peach/10 p-6">
+          <h3 class="text-sm font-medium text-accent-dim uppercase tracking-wide">Bahasa</h3>
+          <ul class="mt-4 space-y-3">
+            {
+              site.languages.map((lang) => (
+                <li class="flex justify-between gap-4 text-sm">
+                  <span class="text-foreground">{lang.name}</span>
+                  <span class="text-muted">{lang.level}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

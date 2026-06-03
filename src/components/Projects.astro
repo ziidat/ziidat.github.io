@@ -1,0 +1,33 @@
+---
+import { site } from '../data/site';
+import SectionHeading from './SectionHeading.astro';
+import ProjectCard from './ProjectCard.astro';
+---
+
+<section id="proyek" class="scroll-mt-24 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5 md:px-8">
+    <SectionHeading
+      eyebrow="Proyek"
+      title="Sistem yang saya kembangkan"
+      description="Solusi digital internal yang menerjemahkan kebutuhan bisnis menjadi dampak operasional nyata."
+    />
+
+    <div class="grid gap-6 lg:grid-cols-2">
+      {
+        site.projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            role={project.role}
+            description={project.description}
+            highlights={project.highlights}
+            tags={project.tags}
+            href={project.href}
+            live={project.live}
+            featured={project.featured}
+            impact={'impact' in project ? project.impact : undefined}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

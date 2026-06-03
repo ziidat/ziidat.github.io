@@ -1,0 +1,100 @@
+---
+interface Props {
+  title: string;
+  role: string;
+  description: string;
+  highlights: readonly string[];
+  tags: readonly string[];
+  href: string | null;
+  live: string | null;
+  featured?: boolean;
+  impact?: string;
+}
+
+const { title, role, description, highlights, tags, href, live, featured = false, impact } =
+  Astro.props;
+---
+
+<article
+  class:list={[
+    'card-shine flex flex-col p-6 md:p-8',
+    featured && 'border-accent/30 shadow-soft-lg lg:col-span-2',
+  ]}
+>
+  <div class="mb-4 flex flex-wrap items-start justify-between gap-4">
+    <div
+      class="flex h-11 w-11 items-center justify-center rounded-2xl bg-surface-overlay text-accent-dim"
+    >
+      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        ></path>
+      </svg>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      {featured && (
+        <span class="rounded-full bg-accent/20 px-2.5 py-0.5 text-xs font-medium text-accent-dim">
+          Unggulan
+        </span>
+      )}
+      {impact && (
+        <span class="rounded-full bg-violet/20 px-2.5 py-0.5 text-xs font-medium text-foreground/80">
+          {impact}
+        </span>
+      )}
+    </div>
+  </div>
+
+  <h3 class="font-display text-xl font-semibold text-foreground md:text-2xl">{title}</h3>
+  <p class="mt-1 text-sm font-medium text-accent-dim">{role}</p>
+  <p class="mt-3 text-sm leading-relaxed text-muted">{description}</p>
+
+  <ul class="mt-5 flex-1 space-y-2">
+    {highlights.map((point) => (
+      <li class="flex gap-2.5 text-sm leading-relaxed text-muted">
+        <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent/70" aria-hidden="true"></span>
+        {point}
+      </li>
+    ))}
+  </ul>
+
+  <ul class="mt-5 flex flex-wrap gap-2" aria-label="Teknologi">
+    {tags.map((tag) => (
+      <li>
+        <span class="rounded-full border border-border-subtle bg-surface px-2.5 py-0.5 font-mono text-xs text-muted">
+          {tag}
+        </span>
+      </li>
+    ))}
+  </ul>
+
+  {
+    (href || live) && (
+      <div class="mt-6 flex flex-wrap gap-3 border-t border-border-subtle pt-5">
+        {href && (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-medium text-foreground transition-colors hover:text-accent-dim"
+          >
+            Kode →
+          </a>
+        )}
+        {live && (
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-medium text-muted transition-colors hover:text-accent-dim"
+          >
+            Live demo →
+          </a>
+        )}
+      </div>
+    )
+  }
+</article>

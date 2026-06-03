@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <style>
+    .bg { fill: #faf8f6; }
+    .letter { fill: #b8a8e8; }
+    .dot { fill: #e8a8c8; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #13111a; }
+      .letter { fill: #c4b5f5; }
+      .dot { fill: #e8a8c8; }
+    }
+  </style>
+  <rect class="bg" width="32" height="32" rx="10"/>
+  <path class="letter" d="M8 22V10h3.2l4.8 7.2V10H19v12h-3.2l-4.8-7.2V22H8z"/>
+  <circle class="dot" cx="24" cy="8" r="3"/>
+</svg>

@@ -1,0 +1,38 @@
+---
+import { site } from '../data/site';
+import SectionHeading from './SectionHeading.astro';
+
+const skillTints = ['bg-surface-overlay', 'bg-mint/15', 'bg-violet/10', 'bg-peach/15'];
+---
+
+<section id="keahlian" class="section-alt scroll-mt-24 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5 md:px-8">
+    <SectionHeading
+      eyebrow="Keahlian"
+      title="Kompetensi teknis & operasional"
+      description="ERP, pengembangan web, continuous improvement, dan kepatuhan regulasi."
+    />
+
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        site.skills.map((group, index) => (
+          <article class:list={['card-shine p-6', skillTints[index % skillTints.length]]}>
+            <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-surface-raised text-xs font-semibold text-accent-dim shadow-soft">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+            <h3 class="font-display text-lg font-semibold text-foreground">{group.category}</h3>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              {group.items.map((skill) => (
+                <li>
+                  <span class="inline-block rounded-full border border-border/80 bg-surface-raised px-2.5 py-1 text-sm text-muted">
+                    {skill}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
