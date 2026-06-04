@@ -22,6 +22,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <meta name="keywords" content="Achmad Fauzi, Full Stack Developer, Laravel Developer, Vue.js, Livewire, Inertia.js, Operational Excellence" />
+    <meta name="author" content="Achmad Fauzi" />
     <meta name="theme-color" content="#faf8f6" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#13111a" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href={canonicalURL} />
@@ -30,6 +32,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content="https://ziidat.github.io/profile.jpg" />
+    <meta property="og:site_name" content="Achmad Fauzi Portfolio" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -41,7 +45,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
     />
-
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Achmad Fauzi",
+      "jobTitle": "Full Stack Developer",
+      "url": "https://ziidat.github.io",
+      "image": "https://ziidat.github.io/profile.jpg",
+      "sameAs": [
+        "https://github.com/ziidat"
+      ]
+    }
+    </script>
     <title>{title}</title>
   </head>
   <body class="mesh-bg min-h-screen">
