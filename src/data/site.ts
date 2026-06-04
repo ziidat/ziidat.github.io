@@ -249,19 +249,19 @@ export const site = {
   certificationGallery: [
     {
       title: 'Certified Secure Computer User (CSCU) – EC-Council',
-      image: 'certificates/cscu.jpg',
+      image: 'certificates/Certificate1.jpg',
     },
     {
       title: 'PERURI Digital Innovation Program Participant',
-      image: 'certificates/digital-innovation-program.jpg',
+      image: 'certificates/Certificate2.jpg',
     },
     {
       title: 'Innovation & Kaizen Award Recipient (2019–2026)',
-      image: 'certificates/innovation-kaizen-award.jpg',
+      image: 'certificates/Certificate3.jpg',
     },
     {
       title: 'Hak Cipta Aplikasi (SIRINE)',
-      image: 'certificates/haki-aplikasi.jpg',
+      image: 'certificates/Certificate4.jpg',
     },
     {
       title: 'Hak Cipta Sistem Informasi (Scan Barcode HCTS)',
