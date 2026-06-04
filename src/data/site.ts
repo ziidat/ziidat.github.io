@@ -262,6 +262,7 @@ export const site = {
     {
       title: 'Hak Cipta Aplikasi (SIRINE)',
       image: 'certificates/Certificate4.JPG',
+    }, 
     {
       title: 'Hak Cipta Sistem Informasi (Scan Barcode HCTS)',
       image: 'certificates/haki-sistem-informasi.jpg',
