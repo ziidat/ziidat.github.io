@@ -70,6 +70,22 @@ export const site = {
   ],
   projects: [
     {
+      title: 'Sistem Scan Barcode Pengelolaan HCTS (Hasil Cetak Tidak Sempurna) Pita Cukai',
+      role: 'Creator and Administrator',
+      description:
+        'Sistem scan barcode pengelolaan hasil kemas harian (HCTS) pita cukai berbasis Microsoft Excel dengan memanfaatkan rumus Excel, scan dan data muncul otomatis',
+      highlights: [
+        'Merancang sistem scan barcode pengelolaan hasil kemas harian (HCTS) pita cukai berbasis Microsoft Excel.',
+        'Basis data master HCTS menggunakan data tarikan dari SAP.',
+        'Menggunakan rumus VLOOKUP, XLOOKUP, INDEX MATCH, IF dan rumus Excel lainnya.',
+      ],
+      tags: ['Microsoft Excel', 'VLOOKUP', 'XLOOKUP', 'INDEX MATCH', 'SAP'],
+      href: null,
+      live: null,
+      featured: true,
+      impact: 'IAKA 2019 - Gold Medal',
+    },
+    {
       title: 'Sistem Informasi Kinerja (SIRINE)',
       role: 'Full Stack Developer & Administrator',
       description:
@@ -106,7 +122,7 @@ export const site = {
       featured: false,
       impact: 'HAKI 2019',
     },
-    { 
+    {
       title: 'Inzitation.id',
       role: 'Digital Invitation Event',
       description:
@@ -209,7 +225,7 @@ export const site = {
     {
       event: 'Innovation Award',
       year: '2020',
-      project: 'Sistem Scan Produksi Harian', 
+      project: 'Sistem Scan Produksi Harian',
       description: 'Sistem scan produksi harian yang memungkinkan pengelolaan produksi harian secara efisien dan akurat.',
       result: 'Participant',
     },
@@ -262,7 +278,7 @@ export const site = {
     {
       title: 'Peruri Digital Inovator Program Participant',
       image: 'certificates/Certificate4.JPG',
-    }, 
+    },
   ],
   stats: [
     { value: '8+', label: 'Tahun pengalaman' },
