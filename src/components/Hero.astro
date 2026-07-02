@@ -98,8 +98,8 @@ const photoFallback = `${base}profile.svg`;
     >
       {
         site.stats.map((stat) => {
-          const Tag = stat.href ? 'a' : 'div';
-          const extra = stat.href ? { href: stat.href } : {};
+          const Tag = 'href' in stat ? 'a' : 'div';
+          const extra = 'href' in stat ? { href: stat.href } : {};
           return (
             <Tag
               {...extra}
