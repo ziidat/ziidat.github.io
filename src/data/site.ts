@@ -286,6 +286,6 @@ export const site = {
     { value: '8+', label: 'Tahun pengalaman' },
     { value: '10', label: 'Proyek inovasi & Kaizen' },
     { value: 'Rp4,7M', label: 'Efisiensi/tahun (SIRINE)' },
-    { value: '2', label: 'HAKI terdaftar' },
+    { value: '2', label: 'HAKI terdaftar', href: '#sertifikasi' },
   ],
 } as const;
