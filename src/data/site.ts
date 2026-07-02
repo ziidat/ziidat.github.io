@@ -254,13 +254,13 @@ export const site = {
       title: 'Sistem Informasi Kinerja (SIRINE)',
       type: 'Hak Cipta Aplikasi',
       year: '2023',
-      link: 'https://pdki-indonesia.dgip.go.id:/link/45433030323032343236323937327c636f70797269676874',
+      link: 'https://pdki-indonesia.dgip.go.id/link/45433030323032343236323937327c636f70797269676874',
     },
     {
       title: 'Aplikasi Scan Barcode HCTS Pita Cukai',
       type: 'Hak Cipta Sistem Informasi',
       year: '2019',
-      link: 'https://pdki-indonesia.dgip.go.id:/link/454330303230323033363133397c636f70797269676874',
+      link: 'https://pdki-indonesia.dgip.go.id/link/454330303230323033363133397c636f70797269676874',
     },
   ],
   /** Letakkan file gambar di `public/certificates/` */
