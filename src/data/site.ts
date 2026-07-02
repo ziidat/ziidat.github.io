@@ -10,7 +10,7 @@ export const site = {
     'Mengelola data operasional, kepatuhan regulasi, dan mengembangkan sistem web yang memberikan dampak nyata di lingkungan manufaktur.',
   email: 'achmadfauzi987@gmail.com',
   phone: '+62 85771813550',
-  phoneHref: 'tel:+6285771813550',
+  phoneHref: 'https://wa.me/6285771813550',
   location: 'Bekasi, Jawa Barat, Indonesia',
   portfolio: 'https://ziidat.github.io',
   availability: 'PERUM PERURI · Manufaktur & Compliance',
